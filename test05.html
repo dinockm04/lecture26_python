@@ -1,0 +1,42 @@
+<!-- test05.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test05</title>
+</head>
+<body>
+<script>
+let chulsoo = 90;
+let younghee = 60;
+let minsoo = 45;
+
+function gcd(a, b){
+    while(b != 0){
+        let temp = a % b;
+        a = b;
+        b = temp;
+    }
+    return a;
+}
+
+function lcm(a, b){
+    return a * b / gcd(a, b);
+}
+
+let result = lcm(lcm(chulsoo, younghee), minsoo);
+
+document.write("<h3>&lt;운동장 한바퀴 도는 소요시간&gt;</h3>");
+
+document.write("철수 : 90초<br>");
+document.write("영희 : 60초<br>");
+document.write("민수 : 45초<br><br>");
+
+document.write("8시 출발 후 다시 출발점에서 만나는 시간 : 8시 " + (result / 60) + "분<br><br>");
+
+document.write("8시 " + (result / 60) + "분에 철수는 총 " + (result / chulsoo) + "바퀴를 뛰었음<br>");
+document.write("8시 " + (result / 60) + "분에 영희는 총 " + (result / younghee) + "바퀴를 뛰었음<br>");
+document.write("8시 " + (result / 60) + "분에 민수는 총 " + (result / minsoo) + "바퀴를 뛰었음<br>");
+</script>
+</body>
+</html>

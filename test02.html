@@ -1,0 +1,28 @@
+<!-- test02.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02</title>
+</head>
+<body>
+<script>
+let start = Number(prompt("시작단"));
+let end = Number(prompt("종료단"));
+
+while(end < start){
+    end = Number(prompt("종료단"));
+}
+
+for(let i = start; i <= end; i++){
+    document.write("<h3>*** " + i + "단 ***</h3>");
+    
+    for(let j = 1; j <= 9; j++){
+        document.write(i + " * " + j + " = " + (i*j) + "<br>");
+    }
+    
+    document.write("<br>");
+}
+</script>
+</body>
+</html>
